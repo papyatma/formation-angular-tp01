@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+
+<!-- structural directives NG-->
+<span *ngFor="let dive of divesArray">
+    <img src="../../assets/images/{{dive}}" 
+    [ngStyle]="{'width':'200px'}"
+    [ngClass]="{'class-images': flag===true, 'class-images2': flag===false}" 
+    >
+</span>
+
+<div *ngIf="connected===true">
+    <h2>{{formation | uppercase}}</h2>
+</div>
+
+<div *ngIf="connected; then blockOK else blockNotOk"></div>
+
+<ng-template #blockOK>Vous êtes connecté(e).</ng-template>
+<ng-template #blockNotOk>Vous êtes déconnectée(e).</ng-template>

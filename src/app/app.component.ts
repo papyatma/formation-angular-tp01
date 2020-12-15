@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+// une classe qui est exportée
 export class AppComponent {
-  title = 'TP01-les-bases';
+  public title:string = 'Angular 11';
+  public duree:number = 4;
 }
